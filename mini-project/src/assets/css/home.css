@@ -3,16 +3,21 @@ body {
 
 #miniNav {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 50px;
   grid-template-areas: ". . header header header header header header . .";
   background-color: #333333; }
+  #miniNav .currency {
+    height: 22px; }
   #miniNav ul.miniNav {
     grid-area: header;
     list-style: none;
     display: inline; }
     #miniNav ul.miniNav li {
-      display: inline; }
+      display: inline;
+      float: right; }
+      #miniNav ul.miniNav li i {
+        color: #fff; }
     #miniNav ul.miniNav a {
       color: #727272;
       display: block;
@@ -30,18 +35,27 @@ body {
   position: absolute;
   left: 0;
   right: 0; }
+  #mainNav a {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   #mainNav ul.mainNav {
     grid-area: header;
     list-style: none;
     display: inline; }
     #mainNav ul.mainNav li {
-      display: inline; }
+      display: inline;
+      float: right; }
     #mainNav ul.mainNav a {
       color: #333333;
-      display: block;
       padding: 16px;
       text-decoration: none;
-      display: inline; }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
       #mainNav ul.mainNav a:hover {
         color: #00c8c8; }
 
@@ -55,13 +69,35 @@ hr {
 .hero {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 920px;
+  grid-template-rows: repeat(4, 230px);
   grid-template-areas: "hero hero hero hero hero hero hero hero hero hero"; }
   .hero img {
     width: 100%;
     height: 100%;
-    grid-area: hero;
+    grid-column: 1 / 11;
+    grid-row: 1 / 5;
     object-fit: cover; }
+  .hero button {
+    grid-row: 4 / 5;
+    grid-column: 8 / 9;
+    z-index: 2;
+    background-color: #f8f8f8;
+    color: #333333;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333333;
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out; }
+    .hero button:hover {
+      color: #fff;
+      background-color: #00c8c8;
+      border: 2px solid #00c8c8; }
 
 .tabs {
   margin-top: 40px;
@@ -90,6 +126,11 @@ hr {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: auto;
   grid-gap: 20px; }
+  .products .item {
+    -webkit-transition: box-shadow .2s ease-out;
+    -moz-transition: box-shadow .2s ease-out;
+    -o-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out; }
   .products .item1 {
     grid-column: 2 / 4;
     grid-row: 1 / 3; }
@@ -124,27 +165,47 @@ hr {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-gap: 20px; }
+  .lookBook .btn-lookbook {
+    background-color: #f8f8f8;
+    color: #333333;
+    width: 150px;
+    height: 55px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333333;
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    float: right; }
+    .lookBook .btn-lookbook:hover {
+      color: #fff;
+      background-color: #00c8c8;
+      border: 2px solid #00c8c8; }
+  .lookBook h2 {
+    margin-top: 0px; }
   .lookBook .mens {
     grid-column: 1 / 5;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end; }
     .lookBook .mens img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start !important; }
   .lookBook .womens {
     grid-column: 5 / 9;
-    background-color: #f8f8f8; }
-    .lookBook .womens img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    background-color: #f8f8f8;
+    padding: 50px; }
   .lookBook .your {
     grid-column: 9 / 13;
-    background-color: #f8f8f8; }
-    .lookBook .your img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    background-color: #f8f8f8;
+    padding: 50px; }
 
 footer {
   display: grid;
@@ -171,28 +232,56 @@ footer {
           color: #00c8c8; }
   footer .award {
     grid-column: 3 / 6;
-    grid-row: 2 / 3; }
-    footer .award img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    grid-row: 2 / 3;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333; }
+    footer .award h1 {
+      color: #fff; }
+    footer .award p {
+      font-size: 30px;
+      color: #f8f8f8;
+      font-weight: 300;
+      margin-top: 0px; }
   footer .social {
     grid-column: 6 / 9;
-    grid-row: 2 / 3; }
-    footer .social img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    grid-row: 2 / 3;
+    background-color: #00c8c8;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+    footer .social i {
+      font-size: 40px;
+      color: #fff; }
 
 .bottomBar {
-  padding-top: 40px;
-  grid-column: 1 / 11;
-  grid-row: 3;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px;
   background-color: #333333;
   font-size: 12.5px; }
   .bottomBar .copyright {
-    color: #727272; }
+    grid-column: 3;
+    color: #727272;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   .bottomBar .author {
-    color: #727272; }
+    color: #727272;
+    grid-column: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   .bottomBar .site {
-    color: #727272; }
+    color: #727272;
+    grid-column: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }

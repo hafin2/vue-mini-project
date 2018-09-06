@@ -4,35 +4,41 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
+    
     <nav id="miniNav">
 
         <ul class="miniNav">
-            <li> <a href="#">Curency - dropdown</a> </li>
-            <li><a href="#">Register</a></li>
+          
+            <select class="currency">
+              <option value="volvo">DKK</option>
+              <option value="saab">EUR</option>
+              <option value="opel">USD</option>
+            </select>
+            <li> <i class="fa fa-shopping-cart"></i> <a href="#">Cart</a></li>
             <li><a href="#">Sign In</a></li>
-            <li><a href="#">Cart - dropdown</a></li>
+            <li><a href="#">Register</a></li>
         </ul>
     </nav>
     <nav id="mainNav">
-        <a href="#"> <img src="img/logo.png" alt="#"> </a>
+        <a href="#"> <img src="./assets/img/logo.png" alt="#"> </a>
         <ul class="mainNav">
             <li>
-                <a href="#">MENS - dropdown</a>
+                <a href="#">Search bar</a>
             </li>
             <li>
-                <a href="#">WOMENS - dropdown</a>
+                <a href="#">LOOK BOOK</a>
+            </li>
+            <li>
+                <a href="#"> LOCAL STORES</a>
             </li>
             <li>
                 <a href="#">THE BRAND</a>
             </li>
             <li>
-                <a href="#"> LOCAL STORES - dropdown</a>
+                <a href="#">WOMENS</a>
             </li>
             <li>
-                <a href="#">LOOK BOOK - dropdown </a>
-            </li>
-            <li>
-                <a href="#">Search bar</a>
+                <a href="#">MENS</a>
             </li>
         </ul>
 
@@ -84,19 +90,27 @@
         </div>
         <div class="award">
             <!-- Skift ud med content -->
-            <img src="img/award.png" alt="">
+            <h1>AWARD WINNER</h1>
+            <p>FASHION AWARDS 2016</p>
         </div>
         <div class="social">
-            <img src="img/social.png" alt="">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i> 
+          <i class="fab fa-pinterest"></i>
         </div>
-        <div class="bottomBar">
+        
+    </footer>
+    <footer class="bottomBar">
             <p class="copyright">© 2016 Avenue Fashion™</p>
             <p class="author">RobbyDesigns.com</p>
             <p class="site">Dev by Loremipsum.com™</p>
-        </div>
     </footer>
   </div>
 </template>
+
+<script>
+</script>
 
 <style lang="scss">
 @import "./assets/scss/style.scss";
