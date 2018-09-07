@@ -80,24 +80,9 @@ hr {
   .hero button {
     grid-row: 4 / 5;
     grid-column: 8 / 9;
-    z-index: 2;
-    background-color: #f8f8f8;
-    color: #333333;
     width: 300px;
     height: 60px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px solid #333333;
-    -webkit-transition: background-color .2s ease-out;
-    -moz-transition: background-color .2s ease-out;
-    -o-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out; }
-    .hero button:hover {
-      color: #fff;
-      background-color: #00c8c8;
-      border: 2px solid #00c8c8; }
+    background-color: #f8f8f8; }
 
 .tabs {
   margin-top: 40px;
@@ -166,24 +151,11 @@ hr {
   grid-template-rows: 1fr;
   grid-gap: 20px; }
   .lookBook .btn-lookbook {
-    background-color: #f8f8f8;
-    color: #333333;
     width: 150px;
     height: 55px;
-    text-align: center;
-    text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
-    border: 2px solid #333333;
-    -webkit-transition: background-color .2s ease-out;
-    -moz-transition: background-color .2s ease-out;
-    -o-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    float: right; }
-    .lookBook .btn-lookbook:hover {
-      color: #fff;
-      background-color: #00c8c8;
-      border: 2px solid #00c8c8; }
+    float: right;
+    background-color: #f8f8f8; }
   .lookBook h2 {
     margin-top: 0px; }
   .lookBook .mens {
@@ -212,7 +184,7 @@ footer {
   margin-top: 100px;
   background-color: #f8f8f8;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, 1fr) 50px;
+  grid-template-rows: 1fr 200px 50px;
   grid-gap: 20px; }
   footer .footerLinks {
     grid-column: 3 / 9;

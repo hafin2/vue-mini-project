@@ -15,12 +15,13 @@
               <option value="opel">USD</option>
             </select>
             <li> <i class="fa fa-shopping-cart"></i> <a href="#">Cart</a></li>
-            <li><a href="#">Sign In</a></li>
+            
+            <li><router-link to="/signin">Sign In</router-link></li>
             <li><a href="#">Register</a></li>
         </ul>
     </nav>
     <nav id="mainNav">
-        <a href="#"> <img src="./assets/img/logo.png" alt="#"> </a>
+        <router-link to="/"> <img src="./assets/img/logo.png" alt="logo"> </router-link>
         <ul class="mainNav">
             <li>
                 <a href="#">Search bar</a>

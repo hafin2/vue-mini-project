@@ -379,24 +379,9 @@ hr {
   .hero button {
     grid-row: 4 / 5;
     grid-column: 8 / 9;
-    z-index: 2;
-    background-color: #f8f8f8;
-    color: #333333;
     width: 300px;
     height: 60px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px solid #333333;
-    -webkit-transition: background-color .2s ease-out;
-    -moz-transition: background-color .2s ease-out;
-    -o-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out; }
-    .hero button:hover {
-      color: #fff;
-      background-color: #00c8c8;
-      border: 2px solid #00c8c8; }
+    background-color: #f8f8f8; }
 
 .tabs {
   margin-top: 40px;
@@ -465,24 +450,11 @@ hr {
   grid-template-rows: 1fr;
   grid-gap: 20px; }
   .lookBook .btn-lookbook {
-    background-color: #f8f8f8;
-    color: #333333;
     width: 150px;
     height: 55px;
-    text-align: center;
-    text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
-    border: 2px solid #333333;
-    -webkit-transition: background-color .2s ease-out;
-    -moz-transition: background-color .2s ease-out;
-    -o-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    float: right; }
-    .lookBook .btn-lookbook:hover {
-      color: #fff;
-      background-color: #00c8c8;
-      border: 2px solid #00c8c8; }
+    float: right;
+    background-color: #f8f8f8; }
   .lookBook h2 {
     margin-top: 0px; }
   .lookBook .mens {
@@ -511,7 +483,7 @@ footer {
   margin-top: 100px;
   background-color: #f8f8f8;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, 1fr) 50px;
+  grid-template-rows: 1fr 200px 50px;
   grid-gap: 20px; }
   footer .footerLinks {
     grid-column: 3 / 9;
@@ -584,3 +556,123 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+
+.signin-hero {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 450px);
+  grid-template-areas: "hero hero hero hero hero hero hero hero hero hero"; }
+  .signin-hero img {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 11;
+    object-fit: cover; }
+
+.signin-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 60px;
+  margin-top: 60px; }
+  .signin-container input {
+    height: 28px;
+    padding-left: 8px;
+    margin-top: 20px; }
+  .signin-container .signin-form {
+    grid-column: 3 / 6;
+    display: flex;
+    flex-direction: column; }
+    .signin-container .signin-form button {
+      height: 55px;
+      width: 120px;
+      margin-top: 20px; }
+  .signin-container .signup-form {
+    grid-column: 6 / 9;
+    display: flex;
+    flex-direction: column; }
+    .signin-container .signup-form button {
+      height: 55px;
+      width: 220px;
+      margin-top: 20px; }
+    .signin-container .signup-form label {
+      font-weight: 300;
+      font-size: 11px; }
+      .signin-container .signup-form label p {
+        margin-top: 8px; }
+    .signin-container .signup-form .btn-policy {
+      display: flex;
+      flex-direction: row; }
+      .signin-container .signup-form .btn-policy .policy {
+        float: right; }
+
+/* The label-container */
+.label-container {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */ }
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+  .label-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #333333;
+    /* Create the checkmark/indicator (hidden when not checked) */ }
+    .label-container .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+  .label-container:hover input ~ .checkmark {
+    background-color: #f8f8f8; }
+
+/* When the checkbox is checked, add a blue background */
+.label-container input:checked ~ .checkmark {
+  background-color: #00c8c8;
+  border: 1px solid #00c8c8; }
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+button {
+  color: #333333;
+  z-index: 2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #333333;
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out; }
+  button:hover {
+    color: #fff;
+    background-color: #00c8c8;
+    border: 2px solid #00c8c8; }
